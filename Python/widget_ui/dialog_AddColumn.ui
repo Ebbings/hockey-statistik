@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog_AddColumn</class>
+ <widget class="QDialog" name="Dialog_AddColumn">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>390</width>
+    <height>197</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QFormLayout" name="formLayout_AddColumn">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMinAndMaxSize</enum>
+     </property>
+     <property name="fieldGrowthPolicy">
+      <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+     </property>
+     <property name="labelAlignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+     <property name="formAlignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+     <property name="horizontalSpacing">
+      <number>30</number>
+     </property>
+     <property name="verticalSpacing">
+      <number>10</number>
+     </property>
+     <property name="leftMargin">
+      <number>20</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_AddColumnName">
+       <property name="text">
+        <string>Column name</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="le_AddColumnName"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_AddColumnDatatype">
+       <property name="text">
+        <string>Column datatype</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QComboBox" name="cb_AddColumnDatatype">
+       <item>
+        <property name="text">
+         <string>Select datatype</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>TINYTEXT</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>TEXT</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>TINYINT</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>SMALLINT</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>INT</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>DOUBLE</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>DATE</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>TIME</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>DATETIME</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_AddColumnDefaultValue">
+       <property name="text">
+        <string>Column default</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="le_AddColumnDefaultValue">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_AddColumnAllowNull">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Allow NULL</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QCheckBox" name="checkb_AddColumnAllowNull">
+       <property name="text">
+        <string>Yes / No</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+       <property name="tristate">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox_AddColumn">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox_AddColumn</sender>
+   <signal>accepted()</signal>
+   <receiver>Dialog_AddColumn</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox_AddColumn</sender>
+   <signal>rejected()</signal>
+   <receiver>Dialog_AddColumn</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
